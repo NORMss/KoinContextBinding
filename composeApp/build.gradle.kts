@@ -31,11 +31,12 @@ kotlin {
     sourceSets {
         
         androidMain.dependencies {
+            implementation(libs.koin.android)
+
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
         }
         commonMain.dependencies {
-            implementation(libs.koin.android)
             implementation(libs.koin.core)
             implementation(libs.koin.compose)
 
