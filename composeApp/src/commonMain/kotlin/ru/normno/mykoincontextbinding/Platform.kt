@@ -1,7 +1,6 @@
 package ru.normno.mykoincontextbinding
 
-interface Platform {
-    val name: String
+@Suppress("EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")
+expect class Platform{
+    fun getName(): String
 }
-
-expect fun getPlatform(): Platform

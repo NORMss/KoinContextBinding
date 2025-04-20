@@ -2,8 +2,9 @@ package ru.normno.mykoincontextbinding
 
 import platform.UIKit.UIDevice
 
-class IOSPlatform: Platform {
-    override val name: String = UIDevice.currentDevice.systemName() + " " + UIDevice.currentDevice.systemVersion
+@Suppress("EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")
+actual class Platform() {
+    actual fun getName(): String {
+        return "iOS - ${UIDevice.currentDevice.systemName}"
+    }
 }
-
-actual fun getPlatform(): Platform = IOSPlatform()
